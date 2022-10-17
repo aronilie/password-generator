@@ -185,6 +185,8 @@ const Form = () => {
             className="generated-password"
             onChange={handleChange}
             value={formData.password}
+            disabled="disabled"
+            autoComplete="off"
           />
         </div>
         <div className="range-container">
