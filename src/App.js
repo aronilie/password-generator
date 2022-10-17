@@ -1,9 +1,9 @@
-import Button from "./components/Button/Button";
+import FormPage from "./pages/FormPage/FormPage";
 
 function App() {
   return (
     <div className="App">
-      <Button />
+      <FormPage />
     </div>
   );
 }
