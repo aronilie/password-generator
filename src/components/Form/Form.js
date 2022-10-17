@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../Button/Button";
+import FormStyled from "./FormStyled";
 
 const Form = () => {
   const formDataInitialState = {
@@ -174,69 +175,80 @@ const Form = () => {
   };
 
   return (
-    <form>
-      <div>
-        <input
-          type="text"
-          id="generatedPassword"
-          onChange={handleChange}
-          value={formData.password}
-        />
-      </div>
-      <div>
-        <label htmlFor="numberCharacters">Number of characters</label>
-        <input
-          className="input-number-characters"
-          name="input-number-characters"
-          type="range"
-          defaultValue={formData.numberOfCharacters}
-          min="1"
-          max="20"
-          id="numberCharacters"
-          onChange={changeRange}
-        />
-        <span className="slider-value">{formData.numberOfCharacters}</span>
-      </div>
+    <FormStyled className="form-container">
+      <form className="form">
+        <div className="input-container">
+          <input
+            type="text"
+            id="generatedPassword"
+            className="generated-password"
+            onChange={handleChange}
+            value={formData.password}
+          />
+        </div>
+        <div className="range-container">
+          <label htmlFor="numberCharacters" className="input-text">
+            Password length
+          </label>
+          <div className="inputs-container">
+            <input
+              className="input-number-characters"
+              name="input-number-characters"
+              type="range"
+              defaultValue={numberOfCharacters}
+              min="1"
+              max="20"
+              id="numberCharacters"
+              onChange={changeRange}
+            />
+            <span className="slider-value">{numberOfCharacters}</span>
+          </div>
+        </div>
 
-      <div>
-        <label htmlFor="contain-uppercase">Contain uppercase letters</label>
-        <input
-          type="checkbox"
-          className="contain-uppercase"
-          id="contain-uppercase"
-          name="contain-uppercase"
-          onChange={handleChange("contain-uppercase")}
-        />
-      </div>
+        <div className="inputs-container">
+          <label htmlFor="contain-uppercase" className="input-text">
+            Contain uppercase letters
+          </label>
+          <input
+            type="checkbox"
+            className="contain-uppercase"
+            id="contain-uppercase"
+            name="contain-uppercase"
+            onChange={handleChange("contain-uppercase")}
+          />
+        </div>
 
-      <div>
-        <label htmlFor="contain-number">Contain numbers</label>
-        <input
-          type="checkbox"
-          className="contain-number"
-          id="contain-number"
-          name="contain-number"
-          onChange={handleChange("contain-number")}
-        />
-      </div>
+        <div className="inputs-container">
+          <label htmlFor="contain-number" className="input-text">
+            Contain numbers
+          </label>
+          <input
+            type="checkbox"
+            className="contain-number"
+            id="contain-number"
+            name="contain-number"
+            onChange={handleChange("contain-number")}
+          />
+        </div>
 
-      <div>
-        <label htmlFor="contain-special-character">
-          Contain special characters
-        </label>
-        <input
-          type="checkbox"
-          className="contain-special-character"
-          id="contain-special-character"
-          name="contain-special-character"
-          onChange={handleChange("contain-special-character")}
-        />
-      </div>
+        <div className="inputs-container">
+          <label htmlFor="contain-special-character" className="input-text">
+            Contain special characters
+          </label>
+          <input
+            type="checkbox"
+            className="contain-special-character"
+            id="contain-special-character"
+            name="contain-special-character"
+            onChange={handleChange("contain-special-character")}
+          />
+        </div>
 
-      <div onClick={calculatePassword} className="form-button">
-        <Button />
-      </div>
-    </form>
+        <div onClick={calculatePassword} className="form-button">
+          <Button />
+        </div>
+      </form>
+    </FormStyled>
   );
 };
 

@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 const ButtonStyled = styled.button`
-  background-color: blueviolet;
-  color: #fff;
+  background-color: #eee2b1;
+  color: #377556;
   border: none;
-  font-size: large;
+  font-size: 14px;
   font-weight: 700;
-  border-radius: 0.5em;
-  height: 70px;
-  width: 350px;
+  height: 3em;
+  width: 100%;
+  cursor: pointer;
 `;
 
 export default ButtonStyled;

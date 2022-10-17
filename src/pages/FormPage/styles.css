@@ -1,0 +1,26 @@
+.full-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #3d8361;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 80vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 600px) {
+  .form-container {
+    width: 600px;
+  }
+}
+
+.title {
+  color: rgb(237, 229, 188);
+  font-weight: 700;
+}
