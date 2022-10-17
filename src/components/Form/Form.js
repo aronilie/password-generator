@@ -28,6 +28,7 @@ const Form = () => {
 
   const handleChange = (id) => {
     setTimeout(() => {
+      // eslint-disable-next-line no-useless-concat
       const checkbox = document.querySelector("." + `${id}`);
 
       checkbox.addEventListener("change", (event) => {
